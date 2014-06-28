@@ -1,0 +1,1 @@
+Vason is a PHP-boilerplate/framework for small websites. Vason was built by Vanja Anderson (vanja@websnabben.se) as part of a course in web programming and published in june 2014. It is based on framework Anax by Mikael Roos (me@mikaelroos.se). It is also published at GitHub: https://github.com/vanjaanderson/Vason-base.
