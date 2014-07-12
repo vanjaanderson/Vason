@@ -1,3 +1,15 @@
+<!-- 
+**********************************************************************************
+  index.tpl.php
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Author: Vanja Maria Anderson
+  Description: Vason webbtemplate in PHP, javascript, CSS and PDO::sqlite
+  Date: 2014-06-28
+  Version: 1.0
+  Website: http://vanjaanderson.com
+  Development: https://github.com/vanjaanderson/Vason
+********************************************************************************** 
+-->
 <!DOCTYPE html>
 <html class='no-js' lang='<?=$lang?>'> <!-- Modernizr will replace the class 'no-js' with a list of features supported by the browser -->
 <head>

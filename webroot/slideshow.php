@@ -8,8 +8,8 @@ include(__DIR__.'/config.php');
 
 
 // Define what to include to make the plugin to work
-$vason['stylesheets'][]        = 'css/slideshow.css';
-$vason['javascript_include'][] = 'js/slideshow.js';
+//$vason['stylesheets'][]        = 'css/slideshow.css';
+//$vason['javascript_include'][] = 'js/slideshow.js';
 
 
 // Do it and store it all in variables in the Vason container.

@@ -1,6 +1,22 @@
+/*
+**********************************************************************************
+  style.css
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Author: Vanja Maria Anderson
+  Description: Main stylesheet in webbtemplate Vason
+  Date: 2014-06-28
+  Version: 1.0
+  Website: http://vanjaanderson.com
+  Development: https://github.com/vanjaanderson/Vason
+********************************************************************************** 
+*/
 /**
  * General elements
  */
+html {
+  overflow-y: scroll;
+}
+
 body {
   color: #333;
   font-family: arial, sans-serif;
@@ -44,7 +60,7 @@ body {
  * Layout for main
  */
 #main {
-  min-height: 20em;
+  min-height: 30em;
 }
  
  
@@ -65,8 +81,6 @@ body {
 * Layout for navbar
 */
 .navbar {display:block;background-color:#333;font-family:Verdana;padding:0.5em;}
-.navbar a {background-color:#999;color:#fff;padding:0.2em;text-decoration:none;}
+.navbar a {color:#fff;padding:0.2em;text-decoration:none;}
 .navbar a:hover {background-color:#666;padding:0.5em 0.2em 0.5em 0.2em}
 .navbar a.selected {background-color:#fff;padding:0.3em 0.2em 0.5em 0.2em;color:#333;}
-
-
