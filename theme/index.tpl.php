@@ -4,7 +4,7 @@
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
   Author: Vanja Maria Anderson
   Description: Vason webbtemplate in PHP, javascript, CSS and PDO::sqlite
-  Date: 2014-06-28
+  Date: 2014-07-12
   Version: 1.0
   Website: http://vanjaanderson.com
   Development: https://github.com/vanjaanderson/Vason
