@@ -1,0 +1,136 @@
+/*
+**********************************************************************************
+  style.css
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+  Author: Vanja Maria Anderson
+  Description: Main stylesheet in webbtemplate Vason
+  Date: 2014-06-28
+  Version: 1.0
+  Website: http://vanjaanderson.com
+  Development: https://github.com/vanjaanderson/Vason
+********************************************************************************** 
+*/
+/**
+ * Big calendar styling
+ */
+.calendardiv {
+  border: 15px solid #ccc;
+  min-height: 100px;
+  text-align: center;
+  overflow: auto;
+  font-style: italic;
+}
+
+.calimg {
+  margin: 2px 0px -2px 0px;
+  height: 420px;
+  width: 946px;
+}
+
+.monthline {
+  border: 1px solid #C0C0C0;
+  font-size: 34px;
+  font-weight: bold;
+  font-style: normal;
+  margin: 0px 2px;
+  text-align: center;
+  width: 944px;
+  height: 40px;
+  overflow: auto;
+}
+
+.monthline a {
+  margin: 3px;
+  text-decoration: none;
+}
+
+span#dateshow {
+  display: inline-block;
+  width: 300px;
+}
+
+table.calendarbig {
+  width: 950px;
+}
+
+tr.dayrow {
+  height: 40px;
+}
+
+tr.days {
+  height: 40px;
+}
+
+.calendarbig td {
+  border: 1px solid #C0C0C0;
+}
+
+td.week {
+  width: 49px;
+}
+
+td.day {
+  font-size: 25px;
+  font-weight: bold;
+  font-style: normal;
+  padding: 5px;
+  text-align: left;
+  vertical-align: top;
+  width: 89px;
+}
+
+.currentmonth {
+  background: #FFFFFF;
+}
+
+.notcurrentmonth {
+  background: #cccccc;
+  color: #999
+}
+
+.redday {
+  color: #d11;
+}
+
+.today {
+  background: #fcd271;
+}
+
+.arrow {
+  font-size: 0.6em;
+  position: relative;
+  top: -3px;
+}
+
+/**
+ * Small calendar styling
+ */
+
+table.calendarsmall {
+  font-size: 12px;
+  height: 190px;
+  margin: 5px auto 5px auto;
+  width: 190px;
+}
+
+.smallmonthline {
+  text-align: center;
+}
+
+tr.smalldayrow {
+  text-align: center;
+}
+
+tr.smalldays {
+  text-align: center;
+}
+
+.calendarsmall td {
+  border: 1px solid #C0C0C0;
+}
+
+td.smallday {
+  font-weight: bold;
+  text-align: center;
+}
+
