@@ -7,26 +7,12 @@
 include(__DIR__.'/config.php'); 
 
 
-// Define what to include to make the plugin to work
-$vason['stylesheets'][]        = 'css/calender.css';
-
-// Do it and store it all in variables in the Vason container.
-$vason['title'] = "Calender";
-
+// Include calender content
+include('calender/content.php');
 /**
- * Set month to view in calendar. If not sent in $_GET, sets todays values.
- * Also checks numeric format: 'MM-YYYY'.
+ * Store all HTML and output-related variables in the vason-array
  */
-if(isset($_GET['month']) && preg_match('/^[0-9]{2}+-[0-9]{4}$/', $_GET['month'])) {
-  $month = $_GET['month'];
-}
-else {
-  $month = date("m") . "-" . date("Y"); //Ex. 'Sep-2013'.
-}
-
-$myCalendar = new CCalendarRenderBig();
-$myCalendar->setMonth($month);
-$output = $myCalendar->Render();
+$vason['title'] = "Kalender";
 
 $vason['main'] = <<<EOD
 <h1>Månadens bild</h1>

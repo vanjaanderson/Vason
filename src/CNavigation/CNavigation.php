@@ -9,12 +9,10 @@ class CNavigation {
     }
   $current = basename($_SERVER['PHP_SELF']);
     $html = "<nav class='$class'>\n";
-    foreach($items as $item) {
-   
-    $selected = (isset($current)) && $current == $item['url'] || $active == $item['text'] ? 'selected' : null;
-    
-    $html .= "<a href='{$item['url']}' class='{$selected}'>{$item['text']}</a>\n";
-    
+    foreach($items as $item) {  
+      $selected = (isset($current)) && $current == $item['url'] || $active == $item['text'] ? 'selected' : null;
+      
+      $html .= "<a href='{$item['url']}' class='{$selected}'>{$item['text']}</a>\n";
     }
     $html .= "</nav>\n";
     return $html;

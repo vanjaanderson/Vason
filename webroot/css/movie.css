@@ -1,0 +1,100 @@
+/**
+ * Style for movies
+ */
+td {
+	padding-left: 16px;
+}
+
+td.moviecell {
+	width: 150px;
+	padding: 0px;
+}
+
+td.titlecell {
+	width: 300px;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+td.titlecell a {
+	text-decoration: none;
+	color: black;
+}
+
+td.titlecell a:hover {
+	color: #C0C0C0;
+}
+
+td.yearcell {
+	width: 50px;
+}
+
+img#singlemovieimg {
+	float: left;
+	margin-right: 16px;
+	border: 15px solid #C0C0C0;
+}
+
+div#info {
+	/*background-color: red;*/
+}
+
+#info p + p {
+	margin: 6px 0px;
+}
+
+p.infolist, p.infotext {
+	margin: 24px 0px !important;
+}
+
+p.title {
+	font-size: 1.2em;
+	border-bottom: 1px solid #C0C0C0;
+	margin-left: 406px;
+}
+
+.clear {
+	clear: both;
+}
+
+.readable h1 {
+	font-size: 2em;
+	margin: 0.7em 0;
+}
+
+fieldset {
+	border: 15px solid #C0C0C0;
+}
+
+.genre a {
+	color: black;
+}
+
+.genre a:hover {
+	text-decoration: none;
+	color: #C0C0C0;
+}
+
+div.rows {
+	float: left;
+	margin: 0.5em 0;
+}
+
+div.hits {
+	float: right;
+	margin: 0.5em 0;
+}
+
+div.pages {
+	margin: 0.5em 0;
+}
+
+#hyrruta {
+	position: absolute;
+	margin: 260px 50%;
+	padding: 0 1em;
+	width: 300px;
+	height: 200px;
+	background: rgb(240,240,240);
+	left: -460px;
+}

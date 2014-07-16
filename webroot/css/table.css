@@ -1,0 +1,13 @@
+/**
+ * Style for table
+ */
+table,
+th,
+td {
+  	border: 1px solid #ccc;
+} 
+
+table {
+	border: 15px solid #ccc;
+	width: 100%;
+}

@@ -18,7 +18,7 @@ ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
  */
 define('VASON_INSTALL_PATH', __DIR__ . '/..');
 define('VASON_THEME_PATH', VASON_INSTALL_PATH . '/theme/render.php');
-define('VASON_SRC_PATH', VASON_INSTALL_PATH . '/src/');
+//define('VASON_SRC_PATH', VASON_INSTALL_PATH . '/src/');
  
 /**
  * Include bootstrapping functions.
@@ -62,15 +62,15 @@ EOD;
 $vason['menu'] = array(
 	'callback' => 'modifyNavbar',
 	'items' => array(
-	    'start'  	  => array('text'=>'Hem',  	 		    'url'=>'index.php', 	   'class'=>null),
-	    'dice'  	  => array('text'=>'Tärningsspel',  'url'=>'dice.php', 		   'class'=>null),
-	    'slideshow' => array('text'=>'Bildspel', 		  'url'=>'slideshow.php',  'class'=>null),
-	    'calendar' 	=> array('text'=>'Kalender', 		  'url'=>'calender.php', 	 'class'=>null
+	    'start'  	=> array('text'=>'Hem',  	 	  'url'=>'index.php',		'class'=>null),
+	    'dice'  	=> array('text'=>'Tärningsspel',  'url'=>'dice.php', 	   	'class'=>null),
+	    'slideshow' => array('text'=>'Bildspel', 	  'url'=>'slideshow.php', 	'class'=>null),
+	    'calendar' 	=> array('text'=>'Kalender', 	  'url'=>'calender.php',   	'class'=>null),
+	    'movie' 	=> array('text'=>'Filmdatabas',   'url'=>'movie.php',   	'class'=>null
     ),
   )
 );
 $active = '';
-
 
 /**
  * Footer content
@@ -88,11 +88,20 @@ $vason['lang']         = 'sv';
 $vason['title_append'] = ' | Vason webbtemplate';
 
 /**
+ * Settings for the database.
+ *
+ */
+$vason['database']['dsn']            = 'mysql:host=localhost;dbname=Vason;';
+$vason['database']['username']       = 'root';
+$vason['database']['password']       = 'dT5#n42b';
+$vason['database']['driver_options'] = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'UTF8'");
+
+/**
  * Theme related settings.
  *
  */
 //$vason['stylesheet'] = 'css/style.css';
-$vason['stylesheets'] 			= array('css/style.css', 'css/dice.css', 'css/slideshow.css');
+$vason['stylesheets'] 			= array('css/table.css', 'css/style.css', 'css/dice.css', 'css/calender.css', 'css/links.css', 'css/movie.css', 'css/slideshow.css');
 $vason['favicon']    			= 'img/favicon.png';
 $vason['apple_touch_icon']  	= 'img/apple-touch-icon.png';
 
