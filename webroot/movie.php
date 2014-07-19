@@ -7,13 +7,12 @@
 // Get config-file and $vason variable. And then store it in vason variables.
 include(__DIR__ . '/config.php');
 
-$acronym = '';
-
 // Connect to a MySQL database using PHP PDO
 $db = new CDatabase($vason['database']);
 $movie = new CFilm();
 $filter = new CTextFilter();
 $content = new CContent($db);
+$acronym = null;
 
 
 // Get parameters 
@@ -53,7 +52,6 @@ foreach($res as $val) {
     $genres .= "<a href='" . $movie->getQueryString(array('genre' => $val->name)) . "'>{$val->name}</a> ";
   }
 }
-
 
 // Prepare the query based on incoming arguments
 $sqlOrig = '
@@ -120,8 +118,6 @@ $res = $db->ExecuteSelectQueryAndFetchAll($sql, $params);
 $hitsPerPage = $movie->getHitsPerPage(array(5, 10, 100), $hits);
 $navigatePage = $movie->getPageNavigation($hits, $page, $max);
 
-
-
 // Put results into a HTML-movie
 if($acronym) {
 $vason['title'] = "Filmer";
@@ -167,7 +163,7 @@ $vason['main'] = <<<EOD
   <input type=hidden name=genre value='{$genre}'/>
   <input type=hidden name=hits value='{$hits}'/>
   <input type=hidden name=page value='1'/>
-  <p><label>Titel: <input type='search' name='title' value='{$title}'/></label></p>
+  <p><label>Titel: <span class='smaller'>(använd % som jokertecken)</span> <input type='search' name='title' value='{$title}'/></label></p>
   <p><label>Genre: </label><span class='genre'>{$genres}</span></p>
   <p><label>Skapad mellan åren: 
       <input type='text' name='year1' value='{$year1}'/></label>
@@ -183,6 +179,7 @@ $vason['main'] = <<<EOD
 <div class='dbtable'>
 <div class='rows'>{$navigatePage}</div>
 <div class='hits'>{$hitsPerPage}</div>
+<div class='clear'></div>
 
 <table id='moviestable'>
 {$tr}

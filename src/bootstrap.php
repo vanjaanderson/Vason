@@ -58,7 +58,7 @@ function getCurrentUrl() {
  * @param string $prepend this to the resulting query string
  * @return string with an updated query string.
  */
-/*function getQueryString($options=array(), $prepend='?') {
+function getQueryString($options=array(), $prepend='?') {
   // parse query string into array
   $query = array();
   parse_str($_SERVER['QUERY_STRING'], $query);
@@ -68,7 +68,7 @@ function getCurrentUrl() {
 
   // Return the modified querystring
   return $prepend . htmlentities(http_build_query($query));
-}*/
+}
 
 /**
  * Create a link to the content, based on its type.

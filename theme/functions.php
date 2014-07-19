@@ -16,22 +16,6 @@ function get_title($title) {
 }
 
 /**
- * Create a navigation bar / menu for the site.
- *
- * @param string $menu for the navigation bar.
- * @return string as the html for the menu.
- */
-// function get_navbar($menu) {
-//   $html = "<nav>\n<ul class='{$menu['class']}'>\n";
-//   foreach($menu['items'] as $item) {
-//     $selected = $menu['callback_selected']($item['url']) ? " class='selected' " : null;
-//     $html .= "<li{$selected}><a href='{$item['url']}' title='{$item['title']}'>{$item['text']}</a></li>\n";
-//   }
-//   $html .= "</ul>\n</nav>\n";
-//   return $html;
-// }
-
-/**
  * Create a navigation bar / menu, with submenu.
  *
  * @param string $menu for the navigation bar.
@@ -45,7 +29,6 @@ function get_navbar($menu) {
     'wrapper' => 'nav',
   );
   $menu = array_replace_recursive($default, $menu);
-
 
   // Create the ul li menu from the array, use an anonomous recursive function that returns an array of values.
   $create_menu = function($items, $callback) use (&$create_menu) {
@@ -77,7 +60,6 @@ function get_navbar($menu) {
   // Call the anonomous function to create the menu, and submenues if any.
   list($html, $ignore) = $create_menu($menu['items'], $menu['callback']);
   
-
   // Set the id & class element, only if it exists in the menu-array
   $id      = isset($menu['id'])    ? " id='{$menu['id']}'"       : null;
   $class   = isset($menu['class']) ? " class='{$menu['class']}'" : null;

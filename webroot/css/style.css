@@ -54,7 +54,11 @@ body {
   font-style: italic;
   color: #666;
 }
- 
+
+.smaller {
+  font-size: smaller;
+  font-style: italic;
+}
  
 /**
  * Layout for main
@@ -62,8 +66,7 @@ body {
 #main {
   min-height: 30em;
 }
- 
- 
+  
 /**
  * Layout for footer
  */
@@ -77,10 +80,23 @@ body {
   color: #666;
 }
 
+.error {
+  color: red;
+}
+
+.okay {
+  color: green;
+}
+
 /**
-* Layout for navbar
-*/
+ * Layout for navbar
+ */
 .navbar {display:block;background-color:#333;font-family:Verdana;padding:0.5em;}
 .navbar a {color:#fff;padding:0.2em;text-decoration:none;}
 .navbar a:hover {background-color:#666;padding:0.5em 0.2em 0.5em 0.2em}
 .navbar a.selected {background-color:#fff;padding:0.3em 0.2em 0.5em 0.2em;color:#333;}
+/* Login- and logout-links */
+#login, #logout {float:right;margin:0;padding:0;}
+#login:hover, #logout:hover {background-color:#666;padding:0.5em 0.2em 0.5em 0.2em;margin:-8px -3px 0 0;}
+#login.selected, #logout.selected {background-color:#fff;padding:0.3em 0.2em 0.5em 0.2em;color:#333;margin:-4px -2px 0 0;}
+#login.selected:hover, #logout.selected:hover {margin:-4px -2px 0 0;}

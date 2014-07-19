@@ -16,4 +16,9 @@ jQuery(document).ready(function() {
   	var Y = D.getFullYear();
   	// Write year innerhtml
   	$('#date').html(Y);
+  	// Put login- and logout-links to the right (see style.css)
+  	$('a[href$="login.php"]').attr('id', 'login');
+  	$('a[href$="logout.php"]').attr('id', 'logout');
+  	// Hide logout link by default
+  	$('a[href$="logout.php"]').css('display', 'none');
 });

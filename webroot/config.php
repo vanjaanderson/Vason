@@ -5,12 +5,11 @@
  */
  
 /**
- * Set the error reporting.
+ * Set the error reporting and buffering.
  *
  */
-error_reporting(-1);              // Report all type of errors
-ini_set('display_errors', 1);     // Display all errors 
-ini_set('output_buffering', 0);   // Do not buffer outputs, write directly
+ini_set('display_errors', 1);     // Display all (1) errors or no (0) errors.
+ini_set('output_buffering', 0);   // Do not buffer outputs (0), write directly. Buffer (1).
  
 /**
  * Define Vason paths.
@@ -30,7 +29,6 @@ include(VASON_INSTALL_PATH . '/src/bootstrap.php');
  * Start the session.
  *
  */
-//session_name('vason');
 session_name(preg_replace('/[^a-z\d]/i', '', __DIR__));
 session_start();
  
@@ -66,7 +64,9 @@ $vason['menu'] = array(
 	    'dice'  	=> array('text'=>'Tärningsspel',  'url'=>'dice.php', 	   	'class'=>null),
 	    'slideshow' => array('text'=>'Bildspel', 	  'url'=>'slideshow.php', 	'class'=>null),
 	    'calendar' 	=> array('text'=>'Kalender', 	  'url'=>'calender.php',   	'class'=>null),
-	    'movie' 	=> array('text'=>'Filmdatabas',   'url'=>'movie.php',   	'class'=>null
+	    'movie' 	=> array('text'=>'Filmdatabas',   'url'=>'movie.php',   	'class'=>null),
+	    'login' 	=> array('text'=>'Logga in',   	  'url'=>'login.php',   	'class'=>null),
+	    'logout' 	=> array('text'=>'Logga ut',   	  'url'=>'logout.php',   	'class'=>null
     ),
   )
 );

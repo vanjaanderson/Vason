@@ -16,12 +16,12 @@ include(__DIR__.'/config.php');
 $vason['title'] = "Slideshow för att testa JavaScript i Vason";
 
 $vason['main'] = <<<EOD
+<h1>{$vason['title']}</h1>
 <div id="slideshow" class='slideshow' data-host="" data-path="img/cats/" data-images='["cat01.jpg", "cat02.jpg", "cat03.jpg", "cat04.jpg"]'>
 	<h2 id="slideshow-header">My Cats</h2>
 	<img src='img/cats/cat01.jpg' alt='My Cats'/>
 </div>
 
-<h1>En slideshow med JavaScript</h1>
 <p>Detta är en exempelsida som visar hur Vason fungerar tillsammans med JavaScript.</p>
 EOD;
 
