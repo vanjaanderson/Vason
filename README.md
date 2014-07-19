@@ -12,6 +12,7 @@ This software is free software and carries a MIT license.
  
 ChangeLog
 ------------------
+* 2014-07-19 | Framework :: course moment 4 - PHP PDO and MySQL
 * 2014-06-28 | Framework :: course moment 1 – Programming in PHP
 
 
